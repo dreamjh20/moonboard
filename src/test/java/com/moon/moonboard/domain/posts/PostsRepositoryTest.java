@@ -1,8 +1,6 @@
 package com.moon.moonboard.domain.posts;
 
 import com.moon.moonboard.MoonboardApplication;
-import com.moon.moonboard.domain.posts.PostRepository;
-import com.moon.moonboard.domain.posts.Posts;
 
 import org.junit.After;
 import org.junit.Test;
@@ -17,16 +15,16 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = MoonboardApplication.class, webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
-public class PostRepositoryTest {
+public class PostsRepositoryTest {
 
     @Autowired
-    PostRepository postRepository;
+    PostsRepository postsRepository;
 
     //After unit test
     @After
     public void cleanup() {
         //clear database
-        postRepository.deleteAll();
+        postsRepository.deleteAll();
     }
 
     @Test
@@ -35,13 +33,13 @@ public class PostRepositoryTest {
         String content = "Test Content";
 
         //insert or update
-        postRepository.save(Posts.builder()
+        postsRepository.save(Posts.builder()
                 .title(title)
                 .content(content)
                 .author("moonboard@Gmail.com")
                 .build());
 
-        List<Posts> postsList = postRepository.findAll();
+        List<Posts> postsList = postsRepository.findAll();
 
         Posts posts = postsList.get(0);
         assertThat(posts.getTitle()).isEqualTo(title);
