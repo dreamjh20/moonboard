@@ -27,5 +27,24 @@ public class PostsRepositoryTest {
         postsRepository.deleteAll();
     }
 
+    @Test
+    public void call_save_post() {
+        String title = "Test Title";
+        String content = "Test Content";
+
+        //insert or update
+        postsRepository.save(Posts.builder()
+                .title(title)
+                .content(content)
+                .author("moonboard@Gmail.com")
+                .build());
+
+        List<Posts> postsList = postsRepository.findAll();
+
+        Posts posts = postsList.get(0);
+        assertThat(posts.getTitle()).isEqualTo(title);
+        assertThat(posts.getContent()).isEqualTo(content);
+
+    }
 
 }
