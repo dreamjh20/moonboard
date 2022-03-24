@@ -1,4 +1,4 @@
-package com.moon.moonboard.domain.posts.web.dto;
+package com.moon.moonboard.web.dto;
 
 import com.moon.moonboard.domain.posts.Posts;
 
