@@ -1,6 +1,6 @@
-package com.moon.moonboard.domain.posts.web;
+package com.moon.moonboard.web;
 
-import com.moon.moonboard.domain.posts.web.dto.PostsSaveRequestDto;
+import com.moon.moonboard.web.dto.PostsSaveRequestDto;
 import com.moon.moonboard.service.posts.PostsService;
 
 import lombok.RequiredArgsConstructor;
