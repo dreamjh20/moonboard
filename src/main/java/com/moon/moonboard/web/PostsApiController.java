@@ -1,5 +1,6 @@
 package com.moon.moonboard.web;
 
+import com.moon.moonboard.domain.posts.Posts;
 import com.moon.moonboard.domain.posts.PostsRepository;
 import com.moon.moonboard.web.dto.PostsResponseDto;
 import com.moon.moonboard.web.dto.PostsSaveRequestDto;
@@ -7,7 +8,14 @@ import com.moon.moonboard.service.posts.PostsService;
 import com.moon.moonboard.web.dto.PostsUpdateRequestDto;
 
 import lombok.RequiredArgsConstructor;
+import org.junit.Test;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RequiredArgsConstructor
 @RestController
@@ -30,5 +38,4 @@ public class PostsApiController {
     {
         return postsService.findById(id);
     }
-
 }
