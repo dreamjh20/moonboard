@@ -1,5 +1,6 @@
 package com.moon.moonboard.domain.posts;
 
+import com.moon.moonboard.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -18,7 +19,7 @@ import javax.persistence.Id;
 @Entity
 //in Entity class never makes Setter method
 
-public class Posts {
+public class Posts extends BaseTimeEntity {
 
     //primary key
     @Id
