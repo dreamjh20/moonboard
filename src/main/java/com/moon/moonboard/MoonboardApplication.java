@@ -10,6 +10,7 @@ public class MoonboardApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(MoonboardApplication.class, args);
+
     }
 
 }
