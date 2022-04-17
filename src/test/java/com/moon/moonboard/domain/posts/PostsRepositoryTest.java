@@ -2,7 +2,6 @@ package com.moon.moonboard.domain.posts;
 
 import com.moon.moonboard.MoonboardApplication;
 
-import org.assertj.core.util.Lists;
 import org.junit.After;
 import org.junit.Test;
 import org.junit.runner.RunWith;
