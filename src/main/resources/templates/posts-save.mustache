@@ -1,7 +1,8 @@
 {{>layout/header}}
 
-    <h1>Regist Posts</h1>
-    <div class="col-md-12">
+<h1>Regist Posts</h1>
+<div class="col-md-12">
+    <div class="col-md-4">
         <form>
             <div class="form-group">
                 <label for="title">Title</label>
@@ -11,6 +12,13 @@
                 <label for="author">Author</label>
                 <input type="text" class="form-control" id="author" placeholder="Write Author">
             </div>
+            <div class="form-group">
+                <label for="content">Content</label>
+                <textarea class="form-control" id="content" placeholder="Write Content"></textarea>
+            </div>
         </form>
+        <a href="/" role="button" class="btn btn-secondary">Cancel</a>
+        <button type="button" class="btn btn-primary" id="btn_save">Regist</button>
     </div>
+</div>
 {{>layout/footer}}
