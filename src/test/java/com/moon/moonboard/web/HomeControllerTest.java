@@ -19,10 +19,14 @@ public class HomeControllerTest {
 
     @Test
     public void load_Mainpage() {
-
         String body = this.restTemplate.getForObject("/", String.class);
-
         assertThat(body).contains("Web Service Starting With Spring Boot");
+    }
+
+    @Test
+    public void load_posts_save() {
+        String body = this.restTemplate.getForObject("/posts/save", String.class);
+        assertThat(body).contains("Regist Posts");
     }
 
 }
