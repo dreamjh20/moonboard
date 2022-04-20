@@ -2,7 +2,16 @@ const main = {
     init: function () {
         const _this = this;
         $('#btn-save').on('click', function () {
+            //버튼 이벤트 발생 시 제목이 비었는지 확인
+            const title = $("#title").val();
+            if (title.replace(/\s|　/gi, "").length === 0) {
+                alert('OH Title Is Empty!')
+                $("$title").focus();
+            }
+
             _this.save();
+            console.log("Clicked")
+
         });
     },
     save: function () {
