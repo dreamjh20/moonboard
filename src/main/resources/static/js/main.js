@@ -8,8 +8,10 @@ const main = {
             for (let i = 0; i < arr.length; i++) {
                 let input = arr[i]
                 let ipt = $(input).val()
-                if (ipt.replace(/\s|　/gi, "").length === 0)
+                if (ipt.replace(/\s|　/gi, "").length === 0) {
                     flag = i + 1
+                    break
+                }
             }
 
             switch (flag) {
