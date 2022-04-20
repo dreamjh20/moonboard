@@ -6,8 +6,29 @@
             <div class="col-md-6">
 
                 <a href="/posts/save" role="button" class="btn btn-primary">Registing Posts</a>
-
             </div>
         </div>
+
+        <br>
+        <table class="table table-horizontal table-bordered">
+            <thead class="thead-strong">
+            <tr>
+                <th>Post Nunber</th>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Modified Date</th>
+            </tr>
+            </thead>
+            <tbody id="tbody">
+            {{#posts}}
+                <tr>
+                    <td>{{id}}</td>
+                    <td>{{title}}</td>
+                    <td>{{author}}</td>
+                    <td>{{modifiedDate}}</td>
+                </tr>
+            {{/posts}}
+            </tbody>
+        </table>
     </div>
 {{>layout/footer}}
