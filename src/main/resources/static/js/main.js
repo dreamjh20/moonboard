@@ -7,6 +7,7 @@ const main = {
             const title = $("#title").val();
             if (title.replace(/\s|　/gi, "").length === 0) {
                 alert('OH Title Is Empty!')
+                console.log("Null Title")
                 $("$title").focus();
             }
 
@@ -14,6 +15,7 @@ const main = {
             const author = $("#author").val();
             if (author.replace(/\s|　/gi, "").length === 0) {
                 alert('OH Author Is Empty!')
+                console.log("Null Author")
                 $("$title").focus();
             }
 
@@ -21,6 +23,7 @@ const main = {
             const content = $("#content").val();
             if (content.replace(/\s|　/gi, "").length === 0) {
                 alert('OH Content Is Empty!')
+                console.log("Null Content")
                 $("$title").focus();
             }
 
