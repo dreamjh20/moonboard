@@ -12,6 +12,7 @@ public class HomeController {
 
     private final PostsService postsService;
 
+
     @GetMapping("/")
     public String home(Model model) {
         model.addAttribute("posts", postsService.findAllDesc());
