@@ -51,7 +51,7 @@ const main = {
             contentType: 'application/json; charset=utf-8',
             data: JSON.stringify(data)
         }).done(function () {
-            alert('Your post has been uploaded.');
+            alert('post has been uploaded.');
             window.location.href = '/';
         }).fail(function (error) {
             alert(JSON.stringify(error));
