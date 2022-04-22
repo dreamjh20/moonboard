@@ -36,6 +36,9 @@ const main = {
                     break
             }
         });
+        $('#btn-update').on('click', function () {
+            _this.update();
+        });
     },
     save: function () {
         const data = {
