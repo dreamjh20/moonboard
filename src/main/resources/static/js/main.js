@@ -39,6 +39,9 @@ const main = {
         $('#btn-update').on('click', function () {
             _this.update();
         });
+        $('#btn-delete').on('click', function () {
+            _this.detele();
+        })
     },
     save: function () {
         const data = {
@@ -80,8 +83,22 @@ const main = {
         }).fail(function (error) {
             alert(JSON.stringify(error))
         });
-    }
+    },
+    delete: function () {
+        let id = $('$id').val();
 
+        $.ajax({
+            type: 'DELETE',
+            url: 'api/vi/posts/' + id
+            dataType: 'json',
+            contentType: 'application/json; charset=utf-8'
+        }).done(function () {
+            alert("Post Deleted");
+            window.location.href = '/';
+        }).fail(function (error) {
+            alert(JSON.stringify(error))
+        });
+    }
 };
 
 main.init();
