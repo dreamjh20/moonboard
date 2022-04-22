@@ -59,7 +59,29 @@ const main = {
         }).fail(function (error) {
             alert(JSON.stringify(error));
         });
+    },
+    update: function () {
+        let data = {
+            title: $('#title').val(),
+            content: $('#content').val()
+        };
+
+        let id = $('#id').val();
+
+        $.ajax({
+            type: 'PUT',
+            url: '/api/v1/posts/'+id,
+            dataType: 'json',
+            contentType: 'application/json; charset=utf-8',
+            data: JSON.stringify(data)
+        }).done(function () {
+            alert('Post modified');
+            window.location.href = '/';
+        }).fail(function (error) {
+            alert(JSON.stringify(error))
+        });
     }
+
 };
 
 main.init();
