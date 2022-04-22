@@ -1,5 +1,6 @@
 const main = {
     init: function () {
+        console.log("MoonBoard")
         const _this = this;
         $('#btn-save').on('click', function () {
             let flag = 0;
@@ -40,8 +41,8 @@ const main = {
             _this.update();
         });
         $('#btn-delete').on('click', function () {
-            _this.detele();
-        })
+            _this.delete();
+        });
     },
     save: function () {
         const data = {
@@ -89,7 +90,7 @@ const main = {
 
         $.ajax({
             type: 'DELETE',
-            url: 'api/vi/posts/' + id
+            url: 'api/vi/posts/' + id,
             dataType: 'json',
             contentType: 'application/json; charset=utf-8'
         }).done(function () {
