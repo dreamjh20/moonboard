@@ -42,7 +42,7 @@ const main = {
         });
         $('#btn-delete').on('click', function () {
             _this.delete();
-        });
+        })
     },
     save: function () {
         const data = {
@@ -86,18 +86,18 @@ const main = {
         });
     },
     delete: function () {
-        let id = $('$id').val();
+        let id = $('#id').val();
 
         $.ajax({
             type: 'DELETE',
-            url: 'api/vi/posts/' + id,
+            url: '/api/vi/posts/'+id,
             dataType: 'json',
             contentType: 'application/json; charset=utf-8'
         }).done(function () {
-            alert("Post Deleted");
+            alert('Post has been deleted');
             window.location.href = '/';
         }).fail(function (error) {
-            alert(JSON.stringify(error))
+            alert(JSON.stringify(error));
         });
     }
 };
