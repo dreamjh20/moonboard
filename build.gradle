@@ -33,6 +33,9 @@ dependencies {
     // For tests
     implementation 'org.springframework.boot:spring-boot-starter-test:2.6.4'
     implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+
+    // Security
+    implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
 }
 
 tasks.named('test') {
