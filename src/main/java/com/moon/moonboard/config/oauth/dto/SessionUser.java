@@ -3,8 +3,10 @@ package com.moon.moonboard.config.oauth.dto;
 import com.moon.moonboard.domain.User.User;
 import lombok.Getter;
 
+import java.io.Serializable;
+
 @Getter
-public class SessionUser {
+public class SessionUser implements Serializable {
     private String name;
     private String email;
     private String picture;
